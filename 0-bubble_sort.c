@@ -10,24 +10,24 @@
 
 void bubble_sort(int *array, size_t size)
 {
-	int swp  = 1;
+	int em;
 
-	while (swp)
+	for (size_t i = 0; i < size - 1; i++)
 	{
-		swp = 0;
-		for (size_t i = 0; i < size - 1; i++)
+		for (size_t j = 0; j < size - i - 1; j++)
 		{
-			if (array[i] > array[i + 1])
+			if (array[j] > array[j+1])
 			{
-				int temp = array[i];
-
-				array[i] = array[i];
-				array[i] = array[i + 1];
-				array[i + 1] = temp;
-				swp = 1;
-				printf(array[i], array[i + 1]);
+				em = array[j];
+				array[j] = array[j+1];
+				aray[j+1] = em;
+				printf("Swapping %d and %d: ", array[j], array[j+1]);
+				for (size_t k = 0; k < size; k++)
+				{
+					printf("%d ", array[k]);
+				}
+				printf("\n");
 			}
 		}
-		size--;
 	}
 }
